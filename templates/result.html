@@ -1,0 +1,23 @@
+{% extends "new_base.html" %}
+
+{% block title %}upload record{% endblock %}
+
+{% block content %}
+
+{% if object %}
+<div><h5>your search reasult :  {{  object|safe }}</h5></div>&nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+{% else %}
+<div style="text-align: center; background-color: rgb(224, 217, 124); padding: 50px; border-radius: 100px; margin-left: 50px;">&nbsp; &nbsp; 
+    <form action="/row_data" enctype="multipart/form-data" method="post">
+    <label for="fileSelect"><h2>Enter your record</h2></label>
+    <input type="file" ID="fileSelect" accept=".xlsx, .xls, .csv" name="data"/><br><br>
+    
+    <button style="padding: 15px;background-color: rgb(48, 191, 194);border-radius: 30px;" type="submit" class="btn btn-secondary scroll-to-section">Upload</button><br><br>
+  </form>
+  </div>
+
+{% endif %}
+
+{% endblock %}

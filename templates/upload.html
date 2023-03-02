@@ -1,0 +1,44 @@
+{% extends "home.html" %}
+{% block title %}upload{% endblock %}
+{% block userblock %}
+
+{% if m1 %}
+
+
+  <!-- <h2 style=" border-radius: 100px;padding-top: 400px; margin-top: -300px; margin-left: 200px; color: rgb(236, 137, 137); ">{{m1}}</h2> -->
+  <form action="/upload.html" method="post" enctype="multipart/form-data" id="upload">
+        
+    <!-- <div style=" border-radius: 100px;padding-top: 400px; margin-top: -350px; margin-left: 200px; ">&nbsp; &nbsp;  -->
+      
+    <div style="text-align: center; background-color: rgb(224, 217, 124); padding: 10px; border-radius: 50px; margin-left: 0px;">&nbsp; &nbsp; 
+      {{m1}} <br>
+      <label for="file"><h2>Record name</h2></label>
+      <input type="text" ID="file" name="recordname"/><br><br>
+      &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label for="fileSelect"><h2>Enter your record</h2></label>
+      <input type="file" ID="fileSelect" accept=".txt" name="fname"/><br><br>
+      
+      <button style="padding: 15px;background-color: rgb(48, 191, 194);border-radius: 30px;" type="submit" class="btn btn-secondary scroll-to-section">Upload</button><br><br>
+  
+    </div>
+  <!-- </div>  -->
+</form>
+{% else %}
+
+<form action="/upload.html" method="post" enctype="multipart/form-data" id ="upload">
+     
+  <!-- <div style=" border-radius: 100px;padding-top: 400px; margin-top: -350px; margin-left: 200px; ">&nbsp; &nbsp;  -->
+    
+  <div style="text-align: center; background-color: rgb(224, 217, 124); padding: 10px; border-radius: 50px; margin-left: 0px;">&nbsp; &nbsp; 
+    <label for="file"><h2>Record name</h2></label>
+    <input type="text" ID="file" name="recordname"/><br><br>
+    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label for="fileSelect"><h2>Enter your record</h2></label>
+    <input type="file" ID="fileSelect" accept=".txt" name="fname"/><br><br>
+    
+    <button style="padding: 15px;background-color: rgb(48, 191, 194);border-radius: 30px;" type="submit" class="btn btn-secondary scroll-to-section">Upload</button><br><br>
+
+  </div>
+<!-- </div>  -->
+</form>
+
+{% endif %}
+{% endblock %}

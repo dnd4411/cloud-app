@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    body{
+      counter-reset: Serial; 
+    background: url("../static/image/11.jpg");
+ background-size: cover;
+    }
+        .menu table{
+        margin-top:50px;
+          width:100%;
+          text-align:center;
+
+          }
+          #txt{
+
+  max-width: 100px;
+    max-height: 40px;
+    white-space:nowrap;
+  overflow:hidden;
+  
+    text-overflow: ellipsis;
+
+
+}
+
+          .menu table td{
+
+          background:rgba(0,100,0);
+
+         }
+          .menu table,.menu table th,.menu table td {
+    /* border: ; */
+    border-collapse: collapse;
+
+}
+.menu table th,.menu table  td {
+    padding: 15px;
+
+    }
+
+
+          .topic h1{
+          color:black;
+          padding:2px;
+          text-align:center;
+          border-style:solid;
+          height:200px;
+          width:1330px;
+          float:left;
+
+
+          }
+          .mainholder{
+
+          position:relative;
+          top:50px;
+          left:50px;
+          z-index:999;
+          float:left;
+          }
+
+          #tb{
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+          }
+
+
+          #div1::before {
+		  counter-increment: Serial;
+		  content:  counter(Serial) ;
+		}
+          
+    </style>
+</head>
+<body>
+<!-- <div class="background-image">
+    <div class="topic"><h1 style="background:rgb(47,79,79);color:yellow;margin-top:10px;margin-left:30px;border-style:solid;width:1300px;height:90px;border-color:black;background:;">Data-Driven Design of Fog Computing aided
+Process Monitoring System for Large-Scale
+Industrial Processes</h1></div> -->
+<div class="menu">
+        <table>
+            <tr>
+                <td><a  style="color:white;text-decoration: none; " href="/fog_data">View Data</a></td>
+               <td><a  style="color:white;text-decoration: none;" href="#">  </a></td>
+                <td><a  style="color:white;text-decoration: none;" href="#"></a></td>
+                <td><a  style="color:white;text-decoration: none;" href="#"> </a></td>
+                <td><a  style="color:white;text-decoration: none;" href="#"> </a></td> 
+                <td><a  style="color:white;text-decoration: none;" href="#"> </a></td> 
+                <td><a  style="color:white;text-decoration: none;" href="#"> </a></td> 
+                <td><a  style="color:white;text-decoration: none;margin-left: 750px; " href="/logout">LOGOUT</a></td>
+
+
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<div class="marqee">
+
+</div>
+<!-- <div class="mainholder">
+{% block userblock %}
+{% endblock %}
+</div> -->
+{% if user %}
+
+<div id="tb">
+    <table class="table table-striped primary ">
+        <thead class="table-danger" >
+          <tr>
+            <th scope="col">Sl No</th>
+            <th scope="col">User name</th>
+            <th scope="col">File name</th>
+            <th scope="col">Content</th>
+          </tr>
+        </thead>
+        {% for a,b,c,d in user %}  
+        <!-- name,username -->
+        <tbody class="table-secondary">
+        
+          <tr>
+            <th scope="row" id="no"><h4 id="div1"></h4></th>
+            <td>{{d}}</td>
+            <td>{{b}}</td>
+            <td id="txt">{{c}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+    {% else %}
+
+<input type="hidden" name="m">
+    {% endif %}
+    
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{% extends "base_user.html" %}
+{% block title %}sign up{% endblock %}
+{% block userblock %}
+  
+
+    <form id="bg" method="post" action="/fog_signup">
+       
+        <div id="l1" >
+            <div class="row m-b-20">
+                <div class="col-md-12">
+                    <h3 class="text-left txt-primary">Create Fog Account</h3>
+                </div>
+            </div>
+            <hr/>
+            <div id="field">
+                <input type="text" class="form-control" placeholder="Username" name="username">
+                <span class="md-line"></span>
+            </div>
+            <div id="field">
+                <input type="email" class="form-control" placeholder="Your Email Address" name="email">
+                <span class="md-line"></span>
+            </div>
+            <div id="field">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <span class="md-line"></span>
+            </div>
+         
+            <div id="field">
+                <input type="submit"id="btn" value="sign up" class="w-75">
+
+            </div>
+                
+            
+      
+
+        </div>
+    </form>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+{% extends "base_user.html" %}
+
+{% block title %}chart{% endblock %}
+
+{% block userblock %}
+ 
+<div class="w3-content w3-section" style="max-width:300px" id="slide">
+    <img class="mySlides" src="../static/image/0001.jpg" style="height: 400px;
+width: 1000px;">
+  <img class="mySlides" src="../static/image/0002.jpg" style="height: 400px;
+width: 1000px;">
+  <img class="mySlides" src="../static/image/0003.png" style="height: 400px;
+width: 1000px;">
+ 
+  <img class="mySlides" src="../static/image/0005.jpg" style="height: 400px;
+width: 1000px;">
+  <img class="mySlides" src="../static/image/0006.jpg" style="height: 400px;
+width: 1000px;">
+  <img class="mySlides" src="../static/image/0007.png" style="height: 400px;
+width: 1000px;">
+<img class="mySlides" src="../static/image/0008.jpg" style="height: 400px;
+width: 1000px;">
+<img class="mySlides" src="../static/image/0009.jpg" style="height: 400px;
+width: 1000px;">
+<img class="mySlides" src="../static/image/0010.jpg" style="height: 400px;
+width: 1000px;">
+
+  </div>
+
+
+
+
+
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+{% endblock %}

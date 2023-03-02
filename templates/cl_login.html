@@ -1,0 +1,116 @@
+{% extends "base_user.html" %}
+{% block title %}Fog login{% endblock %}
+{% block userblock %}{% if m2 %}
+    
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{m2}}!</strong> Enter valid email or password.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+
+        <!-- <div id="form"> -->
+
+            <form id="bg" action="/cl_login_user" method="post">
+               
+                <div id="l1" >
+                    <div class="row m-b-20">
+                        <div class="col-md-12">
+                            <h3 class="text-left txt-primary">Cloud Sign In</h3>
+                        </div>
+                    </div>
+                    <hr/>
+                    
+                    <div id="field">
+                        <input type="email" class="form-control" placeholder="Your Email Address" name="email">
+                        <span class="md-line"></span>
+                    </div>
+                    <div id="field">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+                        <span class="md-line"></span>
+                    </div>
+        
+                    <div >
+                        <input type="submit"id="btn" value="login" class="w-75">
+        
+                    </div>
+                        
+                
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p class="text-inverse text-left"><b><a href="/cl_signup">Create your new account </a></b></p>
+                        </div>
+                        <!-- <div class="col-md-2">
+                            <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                        </div> -->
+                    </div>
+        
+                </div>
+            </form>
+        <!-- </div> -->
+        
+        
+
+  {% else %}
+    
+
+    <form id="bg" action="/cl_login_user" method="post" >
+       
+        <div id="l1" >
+            <div class="row m-b-20">
+                <div class="col-md-12">
+                    <h3 class="text-left txt-primary">Cloud Sign In</h3>
+                </div>
+            </div>
+            <hr/>
+            
+            <div id="field">
+                <input type="email" class="form-control" placeholder="Your Email Address" name="email">
+                <span class="md-line"></span>
+            </div>
+            <div id="field">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <span class="md-line"></span>
+            </div>
+            
+            <div >
+                <input type="submit"id="btn" value="login" class="w-75">
+
+            </div>
+                
+        
+            <hr/>
+            <div class="row">
+                <div class="col-md-10">
+                
+                    <p class="text-inverse text-left"><b><a href="/cl_signup">Create your new account </a></b></p>
+                </div>
+                <!-- <div class="col-md-2">
+                    <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                </div> -->
+            </div>
+
+        </div>
+    </form>
+
+
+
+{%endif%} 
+
+
+
+
+
+
+
+
+
+<input type="hidden" value="">
+
+
+  {% endblock %}
+
+

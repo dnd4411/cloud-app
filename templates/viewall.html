@@ -1,0 +1,31 @@
+{% extends "home.html" %}
+{% block title %}upload{% endblock %}
+{% block userblock %}
+
+<div id="tb">
+    <table class="table table-striped primary ">
+        <thead class="table-danger" >
+          <tr>
+            <th scope="col">Sl No</th>
+            <th scope="col">User name</th>
+            <th scope="col">File name</th>
+            <th scope="col">Content</th>
+          </tr>
+        </thead>
+        {% for a,b,c,d in user %}  
+        <!-- name,username -->
+        <tbody class="table-secondary">
+        
+          <tr>
+            <th scope="row" id="no"><p id="div1"></p></th>
+            <td>{{d}}</td>
+            <td>{{b}}</td>
+            <td id="txt">{{c}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+    
+    
+{% endblock %}
